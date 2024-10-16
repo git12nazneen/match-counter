@@ -1,0 +1,81 @@
+// dom elements select
+// const counterEL = document.getElementById('counter');
+// const incrementEL = document.getElementById('increment');
+// const decrementEL = document.getElementById('decrement');
+
+// // action identifier
+// const INCREMENT = 'increment';
+// const DECREMENT = 'decrement';
+
+// // action creator
+// const increment = (value) => {
+//     return {
+//         type: INCREMENT,
+//         payload: value,
+//     };
+// };
+
+// const decrement = (value) => {
+//     return {
+//         type: DECREMENT,
+//         payload: value,
+//     };
+// };
+
+// // 1 initial state
+// const initialState = {
+//     value: 0,
+// };
+
+// // 2 create reducer
+// function counterReducer(state = initialState, action) {
+//     switch (action.type) {
+//         case INCREMENT:
+//             return {
+//                 ...state,
+//                 value: state.value + action.payload,
+//             };
+//         case DECREMENT:
+//             return {
+//                 ...state,
+//                 value: state.value - action.payload,
+//             };
+//         default:
+//             return state;
+//     }
+// }
+
+// // 3 create store
+// const store = Redux.createStore(counterReducer);
+
+// const render = () => {
+//     const state = store.getState();
+//     counterEL.innerText = state.value.toString();
+// };
+
+// // update ui initially
+// render();
+
+// store.subscribe(render);
+
+// // 4 keypress event listener
+
+// incrementEL.addEventListener('keypress', (event) => {
+//     if (event.key === 'Enter') {
+//         const amount = parseInt(incrementEL.value, 10);
+//         if (!isNaN(amount)) {
+//             store.dispatch(increment(amount)); // Corrected this
+//             incrementEL.value = ''; // Clear input after dispatch
+//         }
+//     }
+// });
+
+// decrementEL.addEventListener('keypress', (event) => {
+//     if (event.key === 'Enter') {
+//         const amount = parseInt(decrementEL.value, 10);
+//         if (!isNaN(amount)) {
+//             store.dispatch(decrement(amount)); // Corrected this
+//             decrementEL.value = ''; // Clear input after dispatch
+//         }
+//     }
+// });

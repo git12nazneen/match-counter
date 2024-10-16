@@ -16,7 +16,7 @@
         <header class="header">
             <div class="container">
                 <div class="header-wrapper">
-                    <img src="https://images.pexels.com/photos/54101/magic-cube-cube-puzzle-play-54101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="logo" class="logo" />
+                    <img class="im" src="https://images.pexels.com/photos/54101/magic-cube-cube-puzzle-play-54101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="logo" class="logo" />
                     <h1 class="name">Scoreboard</h1>
                     <h5 class="total">Total</h5>
                 </div>
@@ -35,15 +35,15 @@
                 <div class="inc-dec">
                     <form class="incrementForm">
                         <h4>Increment</h4>
-                        <input type="number" name="increment" class="lws-increment" />
+                        <input type="number" id="increment" name="increment" class="lws-increment" />
                     </form>
                     <form class="decrementForm">
                         <h4>Decrement</h4>
-                        <input type="number" name="decrement" class="lws-decrement" />
+                        <input type="number" id="decrement" name="decrement" class="lws-decrement" />
                     </form>
                 </div>
                 <div class="numbers">
-                    <h2 class="lws-singleResult">120</h2>
+                    <h2 id="counter" class="lws-singleResult">0</h2>
                 </div>
                 <br>
             
@@ -65,6 +65,8 @@
     </section>
 
     <section class="mask"></section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
+  
     <script src="script.js"></script>
 </body>
 </html>
